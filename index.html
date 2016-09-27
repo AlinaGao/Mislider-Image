@@ -1,0 +1,115 @@
+<!--
+mislider是一款效果非常酷的jQuery响应式圆形图片轮播图特效插件。该轮播图特效可以将图片以圆形图片显示，然后使图片无限循环形成轮播图或旋转木马特效。该轮播图插件的特点有：
+使用简单
+在同一个屏幕中支持多个轮播图
+轮播图的内容可以是单张图片或复杂的HTML内容
+轻量级
+响应式设计
+非常容易定制
+丰富的回调函数
+跨浏览器，支持IE8+浏览器
+
+使用该轮播图插件之前要先引入jQuery和mislider.min.js以及mislider.min.css，mislider-custom.css文件。
+<link href="css/mislider.css" rel="stylesheet">
+<link href="css/mislider-custom.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/mislider.js"></script> 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>mislider图片轮播效果</title>
+		
+		<!-- 载入CSS样式 -->
+		<link href="css/mislider.css" rel="stylesheet">
+		<link href="css/mislider-skin-cameo.css" rel="stylesheet">
+				
+		<!-- 载入jQuery -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/mislider.js"></script>
+
+		<style>	
+			*{
+			    margin: 0 auto;
+			    padding: 0 auto;
+			    		
+			}
+			body {
+			    font-family: 'Roboto', sans-serif;
+			    background-color: #A3C8FF;
+			    text-align: center;	
+			}
+			h1{
+				line-height: 100px;
+				color: #E9F1FE;
+			}
+			h3{
+				line-height: 40px;
+				color: #78ACFB;
+			}
+			.mis-stage{
+				width: 1060px;
+				margin: 0 auto;
+				border: 1px solid #ccc;
+			}
+			.mis-slider{
+				height: 90px;
+				background: #D9E8FF;
+			}
+		</style>
+		
+		<script>
+		jQuery(function ($) {
+			var slider = $('.mis-stage').miSlider({
+				 // 轮播图的高度
+				stageHeight: 380,
+				// 同时在屏幕上可见的轮播图图片数量,false为自适应
+				slidesOnStage: false,
+				// 当前轮播图在屏幕上的位置
+				slidePosition: 'center',
+				// 轮播图开始播放的位置
+				slideStart: 'mid',
+				// 当前slide的缩放因子-其它图片会相应缩小
+				slideScaling: 210,
+				// slide的垂直偏移
+				offsetV: -3,
+				// slide中的内容垂直居中
+				centerV: true,
+				// 导航箭头按钮的透明度
+				navButtonsOpacity: 1
+			});
+		});
+</script> 
+		
+	</head>
+	<body>
+		<h1>mislider图片轮播效果</h1>
+		<div class="mis-stage">
+		  	<ol class="mis-slider">
+		    	<li class="mis-slide">
+		        	<img src="img/m1.jpg" alt="故宫">
+		        	<h3>故宫</h3>
+		    	</li>
+		    	<li class="mis-slide">
+		      	  	<img src="img/m2.jpg" alt="黄山">
+		      	  	<h3>黄山</h3>
+		   	 	</li>
+		   	 	<li class="mis-slide">
+		      	  	<img src="img/m3.jpg" alt="圆明园">
+		      	  	<h3>圆明园</h3>
+		   	 	</li>
+		   	 	<li class="mis-slide">
+		      	  	<img src="img/m4.jpg" alt="石林">
+		      	  	<h3>石林</h3>
+		   	 	</li>
+		   	 	<li class="mis-slide">
+		      	  	<img src="img/m5.jpg" alt="千岛湖">
+		      	  	<h3>千岛湖</h3>
+		   	 	</li>
+		  	</ol>
+		</div>
+		
+	</body>
+</html>
